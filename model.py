@@ -24,8 +24,15 @@ def column_top_row(board, column):
     else:
         return max(np.where(board[:, column]==0)[0])
 
-# Step 3 - drop_piece (not yet solved)
-# TODO: implement
+# Step 3 - drop_piece
+def drop_piece(board, column, player):
+    # TODO: place `player` in the lowest empty row of `column` and return the new board
+    new_board = board.copy()
+    if column_top_row(board, column) == -1:
+        raise ValueError()
+    else:
+        new_board[column_top_row(board, column), column] = player
+        return new_board
 
 # Step 4 - column_full (not yet solved)
 # TODO: implement
