@@ -20,7 +20,7 @@ python scaffold.py
 - [ ] **8.** four_in_a_row_diagonal_down_right
 - [ ] **9.** four_in_a_row_diagonal_up_right
 - [ ] **10.** check_winner
-- [ ] **11.** board_is_full
+- [x] **11.** board_is_full
 - [ ] **12.** is_terminal
 - [ ] **13.** other_player
 - [ ] **14.** step_env
@@ -52,7 +52,7 @@ python scaffold.py
 - [ ] **40.** play_self_play_game
 - [ ] **41.** assign_value_targets
 - [ ] **42.** generate_self_play_batch
-- [ ] **43.** value_loss_mse
+- [x] **43.** value_loss_mse
 - [ ] **44.** policy_loss_cross_entropy
 - [ ] **45.** l2_regularization_loss
 - [ ] **46.** combined_loss
