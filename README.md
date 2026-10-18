@@ -31,7 +31,7 @@ python scaffold.py
 - [ ] **19.** init_value_head
 - [ ] **20.** build_policy_value_net
 - [ ] **21.** policy_value_forward
-- [ ] **22.** action_mask
+- [x] **22.** action_mask
 - [ ] **23.** masked_policy_logits
 - [ ] **24.** masked_log_softmax
 - [ ] **25.** sample_action_from_policy
@@ -54,8 +54,8 @@ python scaffold.py
 - [ ] **42.** generate_self_play_batch
 - [x] **43.** value_loss_mse
 - [x] **44.** policy_loss_cross_entropy
-- [ ] **45.** l2_regularization_loss
-- [ ] **46.** combined_loss
+- [x] **45.** l2_regularization_loss
+- [x] **46.** combined_loss
 - [ ] **47.** encode_batch_states
 - [ ] **48.** iterate_minibatches
 - [ ] **49.** training_step

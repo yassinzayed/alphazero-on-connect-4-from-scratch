@@ -124,8 +124,14 @@ def board_is_full(board):
 # Step 21 - policy_value_forward (not yet solved)
 # TODO: implement
 
-# Step 22 - action_mask (not yet solved)
-# TODO: implement
+# Step 22 - action_mask
+import numpy as np
+
+def action_mask(board):
+    # TODO: return a length-7 boolean mask, True where the column is legal
+    mask = np.zeros(7)
+    mask[valid_moves(board)] = 1
+    return np.array(mask, dtype=bool)
 
 # Step 23 - masked_policy_logits (not yet solved)
 # TODO: implement
@@ -202,11 +208,16 @@ def policy_loss_cross_entropy(predicted_log_probs, target_policy):
     # TODO: compute -sum(target * log_probs) per row, then average over the batch
     return torch.mean(-torch.sum(target_policy*predicted_log_probs, axis=-1))
 
-# Step 45 - l2_regularization_loss (not yet solved)
-# TODO: implement
+# Step 45 - l2_regularization_loss
+def l2_regularization_loss(net):
+    # TODO: return the sum of squared L2 norms of all trainable parameters in net
+    return sum(list(net.parameters())[0][0]**2)
 
-# Step 46 - combined_loss (not yet solved)
-# TODO: implement
+# Step 46 - combined_loss
+def combined_loss(predicted_log_probs, predicted_values, target_policy, target_values, net, policy_weight=1.0, value_weight=1.0, l2_weight=1e-4):
+    # TODO: combine policy CE, value MSE, and L2 reg into a single weighted training loss.
+    L = policy_weight*policy_loss_cross_entropy(predicted_log_probs, target_policy) + value_weight*value_loss_mse(predicted_values, target_values) + l2_weight*l2_regularization_loss(net)
+    return L
 
 # Step 47 - encode_batch_states (not yet solved)
 # TODO: implement
